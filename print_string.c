@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * print_string - print string
  * @r: leng
