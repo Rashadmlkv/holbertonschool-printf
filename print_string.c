@@ -11,7 +11,7 @@ int print_string(unsigned int r, char *s)
 
 	if (!s)
 	{
-        _putchar('(');
+		_putchar('(');
 		_putchar('n');
 		_putchar('u');
 		_putchar('l');
