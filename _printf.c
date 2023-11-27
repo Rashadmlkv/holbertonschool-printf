@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdarg.h>
+#include <stdlib.h>
 /**
  * _printf - print string
  * @format: format
@@ -22,7 +23,7 @@ int _printf(const char *format, ...)
 			continue;
 		else if (*(format + j) == '%' && *(format + j + 1) == '%')
 		{
-			r++, j++, _putchar('%') }
+			r++, j++, _putchar('%'); }
 		else if (*(format + j) == '%' && *(format + j + 1) != 'c'
 				&& *(format  + j + 1) != 's')
 		{
