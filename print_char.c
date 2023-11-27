@@ -7,7 +7,7 @@
  */
 int print_char(unsigned int r, char c)
 {
-	if (!c)
+	if (!c && c != '\0')
 	{
 		_putchar('(');
 		_putchar('n');
