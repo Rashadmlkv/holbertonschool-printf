@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdarg.h>
-#include <stdlib.h>
 /**
  * _printf - print string
  * @format: format
