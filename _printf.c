@@ -32,8 +32,8 @@ int _printf(const char *format, ...)
 		{
 			r = print_string(r, va_arg(ptr, char *));
 			j++; }
-		else if (*(format + j) == '%' && (*(format + j + 1) == 'd')
-			 || (*(format + j + 1) == 'i'))
+		else if ((*(format + j) == '%') && ((*(format + j + 1) == 'd')
+			 || (*(format + j + 1) == 'i')))
 		{
 			r = print_decimal(r, va_arg(ptr, int));
 			j++; }
