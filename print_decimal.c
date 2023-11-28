@@ -8,38 +8,30 @@
 int print_decimal(unsigned int r, int s)
 {
 	int mod = 0, c = 0;
+	unsigned int n;
 	char eded[11];
 
-	if (!s)
+	if (s < 0)
 	{
-		_putchar('(');
-		_putchar('n');
-		_putchar('u');
-		_putchar('l');
-		_putchar('l');
-		_putchar(')');
-		r = r + 6;
+		_putchar('-');
+		r++;
+		n = -1 * s;
 	}
 	else
+		n = s;
+	while (n > 0)
 	{
-		if (s < 0)
-		{
-			_putchar('-');
-			s = -1 * s;
-		}
-		while (s > 0)
-		{
-			mod = s % 10;
-			eded[c] = mod + 48;
-			s = s / 10;
-			c++;
-		}
-		r = r + c;
-		while (c >= 0)
-		{
+		mod = n % 10;
+		eded[c] = mod + 48;
+		n = n / 10;
+		c++;
+	}
+	r = r + c;
+	c = c - 1;
+	while (c >= 0)
+	{
 		_putchar(eded[c]);
 		c--;
-		}
 	}
 	return (r);
 }
