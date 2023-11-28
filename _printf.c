@@ -1,9 +1,6 @@
 #include "main.h"
-<<<<<<< HEAD
 #include <stdarg.h>
 #include <stdlib.h>
-=======
->>>>>>> a0135d9cf78380b8c64a9da2c9bf1a9d15e9fa44
 /**
  * _printf - print string
  * @format: format
