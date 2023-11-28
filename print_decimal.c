@@ -20,7 +20,10 @@ int print_decimal(unsigned int r, int s)
 	else
 		n = s;
 	if (n == 0)
-		_putchar(48), return (r + 1);
+	{
+		_putchar(48);
+		return (r + 1);
+	}
 	while (n > 0)
 	{
 		mod = n % 10;
