@@ -22,10 +22,6 @@ int _printf(const char *format, ...)
 		else if (*(format + j) == '%' && *(format + j + 1) == '%')
 		{
 			r++, j++, _putchar('%'); }
-		else if (*(format + j) == '%' && *(format + j + 1) != 'c'
-				&& *(format  + j + 1) != 's')
-		{
-			r++, _putchar(*(format + j)); }
 		else if (*(format + j) == '%' && *(format + j + 1) == 'c')
 		{
 			r = print_char(r, va_arg(ptr, int));
@@ -33,7 +29,14 @@ int _printf(const char *format, ...)
 		else if (*(format + j) == '%' && *(format + j + 1) == 's')
 		{
 			r = print_string(r, va_arg(ptr, char *));
-			j++; } }
+			j++; }
+		else if (*(format + j) == '%' && (*(format + j + 1) == 'd')
+			 || *(format + j + 1) == 'i')
+		{
+			r = print_decimal(r, va_arg(ptr, int));
+			j++; }
+		else
+			r++, _putchar(*(format + j));
 	if (r == 0)
 		r = -1;
 	return (r); }
