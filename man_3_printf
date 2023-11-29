@@ -19,6 +19,7 @@ DESCRIPTION
 	%s - stands for char array / string
 	%d - stands for decimal
 	%i - stands for integer
+
 EXAMPLES
 	CODE:
 		_printf("Let's print a simple sentence.\n");
@@ -32,3 +33,9 @@ EXAMPLES
 		This sentence is retrieved from va_args!
 		(newline character here!)
 		This code snippet returns the length of Output (41)
+
+SEE ALSO
+	_putchar.c
+	print_char.c
+	print_string.c
+	print_decimal.c
