@@ -11,3 +11,11 @@ SYNOPSIS
 
 DESCRIPTION
 	Produces output according to a format.
+
+
+
+
+	%c - stands for char type
+	%s - stands for char array / string
+	%d - stands for decimal
+	%i - stands for integer
