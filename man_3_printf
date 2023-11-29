@@ -3,3 +3,11 @@ NAME
 
 SYNOPSIS
 	int _printf(const char *format, ...);
+
+
+
+
+("%[i]...", data(numerals));
+
+DESCRIPTION
+	Produces output according to a format.
