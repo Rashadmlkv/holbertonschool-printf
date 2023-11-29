@@ -15,9 +15,20 @@ DESCRIPTION
 	- used to end output to strings)
 	In case of misused type function will return error
 
-
 	%c - stands for char type
 	%s - stands for char array / string
 	%d - stands for decimal
 	%i - stands for integer
-
+EXAMPLES
+	CODE:
+		_printf("Let's print a simple sentence.\n");
+	OUTPUT:
+		Let's print a simple sentence.
+		(newline character here!)
+		This code snippet returns the length of Output (31)
+	CODE:
+		_printf("%s", "This sentence is retrieved from va_args!\n");
+	OUTPUT:
+		This sentence is retrieved from va_args!
+		(newline character here!)
+		This code snippet returns the length of Output (41)
