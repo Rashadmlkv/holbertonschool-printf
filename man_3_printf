@@ -11,11 +11,13 @@ SYNOPSIS
 
 DESCRIPTION
 	Produces output according to a format.
-
-
+	Returns: the number of characters printed (excluding the null byte -
+	- used to end output to strings)
+	In case of misused type function will return error
 
 
 	%c - stands for char type
 	%s - stands for char array / string
 	%d - stands for decimal
 	%i - stands for integer
+
