@@ -1,0 +1,5 @@
+NAME
+	_printf - produces output according to a format
+
+SYNOPSIS
+	int _printf(const char *format, ...);
