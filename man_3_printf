@@ -39,3 +39,6 @@ SEE ALSO
 	print_char.c
 	print_string.c
 	print_decimal.c
+
+BUGS
+    None
