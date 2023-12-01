@@ -1,50 +1,73 @@
-NAME
-	_printf - produces output according to a format
+#!/bin/bash
+echo ".\" Manual Page for _printf
+.TH PRINTF 3 "2023-12-01" "Version 1.0.0.0.1"
 
-SYNOPSIS
-	int _printf(const char *format, ...);
-	("String");
-	("%[c]...", 'data');
-	("%[s]...", "data");
-	("%[d]...", data(numerals));
-	("%[i]...", data(numerals));
+.SH NAME
+_printf \- produces output according to a format
 
-DESCRIPTION
-	Produces output according to a format.
-	Returns: the number of characters printed (excluding the null byte -
-	- used to end output to strings)
-	In case of misused type function will return error
+.SH SYNOPSIS
+\fBinclude "main.h"\fR
+.br
+\fBint _printf(const char *format, ...);\fR
 
-	%c - stands for char type
-	%s - stands for char array / string
-	%d - stands for decimal
-	%i - stands for integer
+.SH DESCRIPTION
+Produces output according to a format.
+.br
+In case of misused type function will return error.
 
-EXAMPLES
-	CODE:
-		_printf("Let's print a simple sentence.\n");
-	OUTPUT:
-		Let's print a simple sentence.
-		(newline character here!)
-		This code snippet returns the length of Output (31)
-	CODE:
-		_printf("%s", "This sentence is retrieved from va_args!\n");
-	OUTPUT:
-		This sentence is retrieved from va_args!
-		(newline character here!)
-		This code snippet returns the length of Output (41)
+.SH RETURN VALUE
+Returns the length of output.
 
-SEE ALSO
-	_putchar.c
-	print_char.c
-	print_string.c
-	print_decimal.c
+.SH FORMATS
+Formats of _printf function:
 
-BUGS
-    None
+.TP
+\fB%c\fR
+Char argument's flag.
 
-AUTHOR
-   Isa Guliyev & Rashad Malikov
+.TP
+\fB%s\fR
+String argument's flag.
 
-COPYRIGHT
-    NA
+.TP
+\fB%i\fR
+Integer argument's flag.
+
+.TP
+\fB%d\fR
+Decimal argument's flag.
+
+.TP
+\fB%%\fR
+Prints '%'
+
+.SH EXAMPLE
+.P
+\fB_printf("Let\'s print %c simple %s.", 'a' "sentence");
+.P
+Output: \fBLet's print a simple sentence.\fR
+.P
+Return: 29
+
+.SH REPORTING BUGS
+Contact with Authors
+
+.SH AUTHORS
+Isa Guliyev
+.br
+Rashad Malikov
+
+.SH COPYRIGHT
+Free to use.
+
+.SH SEE ALSO
+man _putchar.c
+.br
+man print_char.c
+.br
+man print_string.c
+.br
+man print_decimal.c" > man_3_printf.1
+mv man_3_printf.1 /usr/local/man/man1/
+gzip -f /usr/local/man/man1/man_3_printf.1
+man man_3_printf
