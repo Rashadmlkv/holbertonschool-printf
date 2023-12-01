@@ -15,7 +15,7 @@ int print_char(unsigned int r, char c)
 		_putchar('l');
 		_putchar('l');
 		_putchar(')');
-        r = r + 6; }
+		r = r + 6; }
 	else
 	{
 		_putchar(c);
